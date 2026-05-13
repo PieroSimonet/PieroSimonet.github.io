@@ -412,3 +412,61 @@ strong {
     overflow: hidden;
     line-height: 0; /* Rimuove spazi vuoti sotto il video */
 }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.hero-image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.hero-image img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  object-position: left top;
+  transform: scale(1.25);
+}
+
+.hero-content {
+  flex: 1.2;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-image {
+    width: 240px;
+    height: 240px;
+    order: 1; /* immagine sopra */
+  }
+
+  .hero-content {
+    order: 2; /* testo sotto */
+  }
+
+  .hero-image img {
+    width: 120%;
+    height: 120%;
+    transform: scale(1.25);
+    object-position: left top;
+  }
+}
