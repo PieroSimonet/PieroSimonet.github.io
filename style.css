@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Inter", sans-serif;
     background-color: #0f1115;
@@ -140,4 +144,209 @@ footer {
     .hero-description {
     font-size: 1rem;
     }
+}
+
+/* PUBLICATIONS EXTRA STYLE */
+
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pub-item {
+    background: #171a20;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #2a2f36;
+    transition: 0.3s ease;
+}
+
+.pub-item:hover {
+    border-left-color: #9ecbff;
+    background: #1c2027;
+}
+
+.pub-badge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    background: #2a2f36;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #8ca0b3;
+    text-transform: uppercase;
+}
+
+.badge-submitted {
+    background: #2e2610;
+    color: #f5d67b;
+}
+
+.badge-accepted {
+    background: #1a2e1a;
+    color: #a3e6a3;
+}
+
+.contribution {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #8ca0b3;
+    font-size: 0.9rem;
+}
+
+strong {
+    color: #ffffff; /* Evidenzia il tuo nome */
+}
+
+.tech-stack {
+    padding: 2rem 0;
+    background: #12141a;
+    border-bottom: 1px solid #232831;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill-badge {
+    background: #1c2027;
+    border: 1px solid #2a2f36;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #9ecbff;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tags span {
+    font-size: 0.7rem;
+    background: #232831;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #8ca0b3;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #9ecbff;
+}
+
+.card-highlight {
+    border: 1px solid #9ecbff44;
+    background: linear-gradient(145deg, #171a20, #1c2027);
+}
+
+.badge-os {
+    font-size: 0.7rem;
+    color: #a3e6a3;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 17, 21, 0.8);
+    backdrop-filter: blur(10px); /* Effetto vetro sfocato */
+    z-index: 1000;
+    border-bottom: 1px solid #232831;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #8ca0b3;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* SOCIAL ICONS */
+.hero-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.hero-socials a {
+    color: #8ca0b3;
+    transition: 0.3s transform, 0.3s color;
+}
+
+.hero-socials a:hover {
+    color: #9ecbff;
+    transform: translateY(-3px);
+}
+
+/* ADJUST HERO FOR FIXED NAV */
+.hero {
+    padding-top: 80px; /* Evita che la nav copra il contenuto */
+}
+
+/* Icona dentro il bottone */
+.button i {
+    margin-right: 8px;
+}
+
+.hero-subtitle-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #8ca0b3; /* Colore più tenue per le applicazioni */
+}
+
+.status-highlight {
+    color: #ffffff; /* Bianco per far risaltare la tua posizione attuale */
+    font-weight: 600;
+}
+
+.divider {
+    margin: 0 10px;
+    color: #3d444d;
+    font-weight: 300;
 }

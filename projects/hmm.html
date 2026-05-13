@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project: Context-Aware Decoding | Piero Simonetto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">PS</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding-top: 120px;">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Closing the Loop: Bi-Directional BCI</h1>
+      
+      <div class="project-tags" style="margin-bottom: 2rem;">
+        <span class="skill-badge">HMM</span>
+        <span class="skill-badge">Probabilistic Fusion</span>
+        <span class="skill-badge">ROS</span>
+        <span class="skill-badge">C++</span>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem; border-left: 4px solid #9ecbff;">
+        <h3>The Scientific Challenge</h3>
+        <p>Motor Imagery (MI) signals are notoriously noisy and non-stationary. Traditional decoders often ignore the fact that the robot is operating in a structured environment where only certain actions are meaningful at any given time.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div>
+          <h3>Multisensory Fusion Approach</h3>
+          <p style="color: #b8c0ca;">
+            We implemented a <strong>Hidden Markov Model (HMM)</strong> framework that fuses:
+          </p>
+          <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1rem; line-height: 1.8;">
+            <li><strong>Neural Evidence:</strong> Real-time EEG features from motor areas.</li>
+            <li><strong>Environmental Evidence:</strong> Objects and affordances detected via LiDAR/Vision.</li>
+            <li><strong>Behavioral Constraints:</strong> Probabilistic transition maps of the intended task.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Results</h3>
+          <p style="color: #b8c0ca;">
+            By contextualizing the brain signals, we achieved a significant increase in decoding accuracy and a reduction in the "false positive" commands, leading to smoother and more natural human-robot interaction in complex indoor scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
