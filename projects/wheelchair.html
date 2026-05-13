@@ -1,54 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project: Context-Aware Decoding | Piero Simonetto</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="../index.html" class="nav-logo">PS</a>
-      <div class="nav-links">
-        <a href="../index.html#projects">Projects</a>
+<section style="padding: 20px 0;"> <!-- Ottimizzato per il modal -->
+  <div class="container">
+    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #ffffff;">Shared Autonomy Wheelchair Navigation</h1>
+    <p style="font-style: italic; color: #9effae; margin-bottom: 2rem;">Hierarchical Control Framework with NMPC and Multi-point Virtual APF</p>
+    
+    <div class="project-tags" style="margin-bottom: 2rem;">
+      <span class="skill-badge">OpenNav</span>
+      <span class="skill-badge">NMPC</span>
+      <span class="skill-badge">Virtual APF</span>
+      <span class="skill-badge">ROS/ROS2</span>
+      <span class="skill-badge">C++</span>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem; border-left: 4px solid #9effae; background: #1e232b;">
+      <h3>The Engineering Challenge</h3>
+      <p>
+        Developing an assistive mobility system requires balancing user agency with autonomous safety. The challenge is to process <strong>imperfect user commands</strong> and execute smooth, collision-free trajectories in cluttered environments, accounting for the <strong>full physical geometry</strong> of the wheelchair.
+      </p>
+    </div>
+
+    <!-- VIDEO SECTION -->
+    <div style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">Experimental Validation</h2>
+      <div class="video-container" style="background: #000; border-radius: 12px; overflow: hidden; line-height: 0;">
+        <video autoplay loop muted playsinline style="width:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <source src="assets/videos/nav.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p style="font-size: 0.9rem; color: #8ca0b3; font-style: italic; margin-top: 0.8rem; text-align: center;">
+        Dynamic shared-control: blending user intent with NMPC trajectory optimization and APF safety.
+      </p>
+    </div>
+
+    <!-- METHODOLOGY GRID -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+      <div>
+        <h3 style="color: #ffffff; border-bottom: 1px solid #3d444d; padding-bottom: 10px;">The Navigation Pipeline</h3>
+        <p style="color: #b8c0ca; margin-top: 1rem;">
+          We implemented a hierarchical architecture to ensure robust navigation:
+        </p>
+        <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1.2rem; line-height: 1.8;">
+          <li><strong>Autonomous Target Discovery:</strong> Using <strong>OpenNav</strong> and RGB cameras to identify candidate goals when user input is missing or uncertain.</li>
+          <li><strong>NMPC Optimization:</strong> A Nonlinear Model Predictive Controller that generates feasible trajectories based on user intent and kinematic constraints.</li>
+          <li><strong>Multi-point Virtual APF:</strong> A reactive layer modeling the full wheelchair shape. By handling immediate obstacle repulsion, it significantly <strong>reduces the computational burden on the NMPC</strong>.</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 style="color: #ffffff; border-bottom: 1px solid #3d444d; padding-bottom: 10px;">Key Contributions</h3>
+        <p style="color: #b8c0ca; margin-top: 1rem;">
+          The integration of predictive and reactive control layers results in:
+        </p>
+        <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1.2rem; line-height: 1.8;">
+          <li><strong>Command Recovery:</strong> The system identifies and corrects dangerous or ambiguous user inputs via semantic context.</li>
+          <li><strong>Geometric Awareness:</strong> The Multi-point APF strategy (virtual sensors) ensures the entire wheelchair body avoids collisions, not just a single point.</li>
+          <li><strong>Real-time Performance:</strong> Efficient C++/ROS  implementation</li>
+        </ul>
       </div>
     </div>
-  </nav>
 
-
-  <section>
-    <div class="container">
-      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Shared-Control Wheelchair</h1>
-      <div class="project-tags" style="margin-bottom: 2rem;">
-        <span class="skill-badge">ROS2</span>
-        <span class="skill-badge">C++</span>
-        <span class="skill-badge">NMPC</span>
-        <span class="skill-badge">Python</span>
-      </div>
-
-      <div class="card" style="margin-bottom: 2rem; border-left: 4px solid #9ecbff;">
-        <h3>Overview</h3>
-        <p>This project focuses on the development of a smart wheelchair navigation system that combines user intentions (decoded via BCI or joystick) with autonomous obstacle avoidance using Nonlinear Model Predictive Control (NMPC).</p>
-      </div>
-
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        <div>
-          <h3>Key Contributions</h3>
-          <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1rem;">
-            <li>Developed the ROS2 middleware for real-time sensor fusion.</li>
-            <li>Implemented a custom NMPC controller for smooth navigation in cluttered environments.</li>
-            <li>Integrated an intention decoding layer based on EEG signals.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Technologies Used</h3>
-          <p style="color: #b8c0ca;">The system runs on Ubuntu 22.04 with ROS2 Humble. We used Gazebo for initial validation and then deployed the stack on a modified Sunrise medical wheelchair equipped with LiDAR and depth cameras.</p>
-        </div>
-      </div>
+    <!-- FOOTER: PAPER/THESIS LINK -->
+    <div style="margin-top: 3rem; text-align: center; padding: 2rem; border-top: 1px solid #232831;">
+      <p style="color: #8ca0b3; margin-bottom: 1rem;">Interested in the full technical implementation?</p>
+      <a href="#" class="button button-secondary" style="display: inline-block;">
+        <i class="fas fa-file-pdf"></i> View Paper
+      </a>
     </div>
-  </section>
-</body>
-</html>
+  </div>
+</section>
