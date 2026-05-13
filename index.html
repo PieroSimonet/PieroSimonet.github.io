@@ -9,48 +9,86 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">PS</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-
         <p class="hero-subtitle">
+          <span class="status-highlight">PhD Candidate</span> 
+          <span class="divider">|</span> 
           Robotics • AI • Human-Robot Interaction
         </p>
-
-        <h1>
-          Piero Simonetto
-        </h1>
-
+        <h1>Piero Simonetto</h1>
         <p class="hero-description">
-          PhD candidate working on assistive robotics, shared autonomy,
-          and brain-computer interfaces. Focused on building real-time
-          robotic systems integrating AI, human intention decoding,
-          and autonomous navigation.
+          PhD candidate working on assistive robotics, shared autonomy, and brain-computer interfaces. 
+          Focused on building real-time robotic systems integrating AI, human intention decoding, and autonomous navigation.
         </p>
 
-        <div class="hero-buttons">
-          <a class="button button-primary" href="#">
-            View Projects
+        <!-- SOCIAL LINKS -->
+        <div class="hero-socials">
+          <a href="https://github.com/PieroSimonet" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/piero-simonetto-8ab8b3240/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?hl=it&user=c1UmzHsAAAAJ" target="_blank" title="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a href="mailto:simonetto.piero@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
           </a>
 
-          <a class="button button-secondary" href="#">
-            Download CV
-          </a>
         </div>
 
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#projects">View Projects</a>
+          <a class="button button-secondary" href="assets/CV_ind.pdf" download="CV_Piero_Simonetto.pdf">
+            <i class="fas fa-file-pdf"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- SKILL -->
+  <section class="tech-stack">
+    <div class="container">
+      <div class="skills-wrapper">
+        <span class="skill-badge">ROS/ROS2</span>
+        <span class="skill-badge">C++</span>
+        <span class="skill-badge">Python3</span>
+        <span class="skill-badge">Matlab</span>
+        <span class="skill-badge">PyTorch</span>
+        <span class="skill-badge">Linux</span>
+        <span class="skill-badge">Gazebo</span>
+        <span class="skill-badge">Docker</span>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section>
+  <section id="projects">
     <div class="container">
 
       <h2 class="section-title">
@@ -61,18 +99,25 @@
 
         <div class="card">
           <h3>Shared-Control Wheelchair</h3>
+          <div class="project-tags">
+            <span>ROS</span> <span>ROS2</span> <span>C++</span> <span>NMPC</span>
+          </div>
           <p>
-            ROS2-based assistive navigation framework integrating
-            user intention decoding and autonomous navigation.
+            ROS-based assistive navigation framework integrating user and robotic intelligence.
           </p>
+          <a href="projects/wheelchair.html" class="project-link">Read more →</a>
         </div>
 
         <div class="card">
-          <h3>EEG-Based Robot Control</h3>
+          <h3>Bi-Directional Intention Decoding</h3>
+          <div class="project-tags">
+            <span>ROS</span> <span>C++</span> <span>HMM</span>
+          </div>
           <p>
-            Real-time motor imagery decoding and human-in-the-loop
-            robotic interaction using non-invasive BCI systems.
+            
+            ROS-based assistive navigation framework integrating user and robotic intelligence.
           </p>
+          <a href="projects/hmm.html" class="project-link">Read more →</a>
         </div>
 
         <div class="card">
@@ -83,41 +128,140 @@
           </p>
         </div>
 
+        <div class="card card-highlight">
+          <div class="badge-os">Open Source Contribution</div>
+          <h3>ROSNeuro / ROS2Neuro</h3>
+          <p>
+            Core contributor to the ROSNeuro ecosystem. Developing middleware for 
+            real-time BCI-robot integration and porting existing modules to ROS2.
+          </p>
+          <div class="card-links">
+            <a href="https://github.com/rosneuro" target="_blank">View Organization</a>
+          </div>
+        </div>
+
       </div>
 
+    </div>
+  </section>
+
+  
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience & Leadership</h2>
+      
+      <div class="card-grid">
+        
+        <!-- Periodo all'estero -->
+        <div class="card">
+          <div class="badge-os" style="color: #9ecbff;">International Experience</div>
+          <h3>Visiting Researcher</h3>
+          <p><strong>Institution Name</strong>, City, Country</p>
+          <p style="font-size: 0.9rem; color: #8ca0b3;">Period (e.g., Sept 2024 - Dec 2024)</p>
+          <p style="margin-top: 1rem;">Research on [Topic] in collaboration with [Group/Prof]. Focus on brain-computer interface integration.</p>
+        </div>
+
+        <!-- Workshop Organizer -->
+        <div class="card">
+          <div class="badge-os" style="color: #f5d67b;">Leadership</div>
+          <h3>Workshop Organizer</h3>
+          <p><strong>[Nome Workshop]</strong></p>
+          <p style="font-size: 0.9rem; color: #8ca0b3;">Event (e.g., IROS 2025 or BCI Conference)</p>
+          <p style="margin-top: 1rem;">Co-organized a workshop focused on [Topic], managing submissions and inviting international speakers.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- PUBLICATIONS -->
-  <section>
+  <section id="publications">
     <div class="container">
+      <h2 class="section-title">Publications</h2>
+      
+      <div class="pub-list">
 
-      <h2 class="section-title">
-        Publications
-      </h2>
+        <!-- 2026 -->
+        <div class="pub-item">
+          <span class="pub-badge badge-submitted">Submitted 2026</span>
+          <p>
+            <strong>P. Simonetto</strong>, S. Tortora, E. Menegatti, E. Cainelli, J. d. R. Millán, and L. Tonin, 
+            "Detection of Error-Related Potentials from Movement Feedback during Operation of a Powered Wheelchair," 
+            <em>submitted to IEEE Transactions on Human-Machine Systems</em>, 2026.
+          </p>
+        </div>
 
-      <div class="card">
-        <p>
-          Selected publications in robotics, brain-computer interfaces,
-          assistive navigation, and human-robot interaction.
-        </p>
+        <div class="pub-item">
+          <span class="pub-badge badge-submitted">Submitted 2026</span>
+          <p>
+            <strong>P. Simonetto</strong>, A. Polato, F. Pasti, M. R. ur Rahman, S. Vascon, N. Bellotto, E. Menegatti, S. Tortora, and L. Tonin, 
+            "A Multi-Layer Navigation System for Smart Wheelchairs with a Limited Input Interface," 
+            <em>submitted to IROS 2026</em>.
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <span class="pub-badge badge-submitted">Submitted 2026</span>
+          <p>
+            <strong>P. Simonetto</strong>, S. Tortora, E. Cainelli, E. Menegatti, and L. Tonin, 
+            "Closing the Loop: Bi-Directional Communication Improves Motor Imagery Decoding in Complex Environments," 
+            <em>submitted to IEEE Transactions on Human-Machine Systems</em>, 2026.
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <span class="pub-badge badge-accepted">Accepted 2026</span>
+          <p>
+            F. Virgolini, <strong>P. Simonetto</strong>, S. Tortora, E. Menegatti, and L. Tonin, 
+            "Beyond Visual Feedback: Isolating Vestibular Error-Related Potentials During Wheelchair Operations," 
+            <em>10th Graz BCI Conference</em>, 2026.
+            <small class="contribution">Contribution: experimental design.</small>
+          </p>
+        </div>
+
+        <!-- 2025 -->
+        <div class="pub-item">
+          <span class="pub-badge">Presented 2025</span>
+          <p>
+            <strong>P. Simonetto</strong>, S. Toniolo, S. Tortora, E. Menegatti, and L. Tonin, 
+            "Enhancing Motor Imagery Decoding with Environmental Context During Robot Control," 
+            <em>IEEE SMC - BMI Workshop</em>, Vienna, 2025.
+          </p>
+        </div>
+
+        <!-- 2024 -->
+        <div class="pub-item">
+          <span class="pub-badge">Presented 2024</span>
+          <p>
+            M. R. ur Rahman, <strong>P. Simonetto</strong>, A. Polato, F. Pasti, L. Tonin, and S. Vascon, 
+            "OpenNav: Efficient Open Vocabulary 3D Object Detection for Smart Wheelchair Navigation," 
+            <em>ECCV 2024 Workshops</em>.
+            <small class="contribution">Contribution: navigation task design and real-device implementation.</small>
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <span class="pub-badge">Presented 2024</span>
+          <p>
+            D. De Lazzari, <strong>P. Simonetto</strong>, N. Turcato, L. Tonin, and R. Carli, 
+            "Nonlinear Model Predictive Control of a BMI-guided Wheelchair for Navigation in Unknown Environments," 
+            <em>European Control Conference (ECC)</em>, 2024.
+            <small class="contribution">Contribution: NMPC controller design and real-device implementation.</small>
+          </p>
+        </div>
+
       </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="contact">
     <div class="container">
 
-      <h3>Piero Simonetto</h3>
+      <h3>Piero Simonetto 2026</h3>
 
-      <div class="footer-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="mailto:simonetto.piero@gmail.com">Email</a>
-      </div>
-
+      
     </div>
   </footer>
 

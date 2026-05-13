@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project: Context-Aware Decoding | Piero Simonetto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">PS</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <section>
+    <div class="container">
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Shared-Control Wheelchair</h1>
+      <div class="project-tags" style="margin-bottom: 2rem;">
+        <span class="skill-badge">ROS2</span>
+        <span class="skill-badge">C++</span>
+        <span class="skill-badge">NMPC</span>
+        <span class="skill-badge">Python</span>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem; border-left: 4px solid #9ecbff;">
+        <h3>Overview</h3>
+        <p>This project focuses on the development of a smart wheelchair navigation system that combines user intentions (decoded via BCI or joystick) with autonomous obstacle avoidance using Nonlinear Model Predictive Control (NMPC).</p>
+      </div>
+
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div>
+          <h3>Key Contributions</h3>
+          <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1rem;">
+            <li>Developed the ROS2 middleware for real-time sensor fusion.</li>
+            <li>Implemented a custom NMPC controller for smooth navigation in cluttered environments.</li>
+            <li>Integrated an intention decoding layer based on EEG signals.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Technologies Used</h3>
+          <p style="color: #b8c0ca;">The system runs on Ubuntu 22.04 with ROS2 Humble. We used Gazebo for initial validation and then deployed the stack on a modified Sunrise medical wheelchair equipped with LiDAR and depth cameras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
