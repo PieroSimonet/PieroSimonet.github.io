@@ -1,58 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project: Context-Aware Decoding | Piero Simonetto</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="../index.html" class="nav-logo">PS</a>
-      <div class="nav-links">
-        <a href="../index.html#projects">Projects</a>
-      </div>
+<section style="padding: 20px 0;"> <!-- Ridotto il padding perché ora vive dentro un modal -->
+  <div class="container">
+    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #ffffff;">Context-Aware Intent Decoding</h1>
+    <p style="font-style: italic; color: #9ecbff; margin-bottom: 2rem;">A Generalized Probabilistic Framework for Human-Robot Interaction</p>
+    
+    <div class="project-tags" style="margin-bottom: 2rem;">
+      <span class="skill-badge">HMM</span>
+      <span class="skill-badge">Bayesian Inference</span>
+      <span class="skill-badge">ROS</span>
+      <span class="skill-badge">C++</span>
+      <span class="skill-badge">Multisensory Fusion</span>
     </div>
-  </nav>
 
-  <section style="padding-top: 120px;">
-    <div class="container">
-      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Closing the Loop: Bi-Directional BCI</h1>
+    <div class="card" style="margin-bottom: 2rem; border-left: 4px solid #9ecbff; background: #1e232b;">
+      <h3>The Scientific Challenge</h3>
+      <p>
+        Human intention signals—whether derived from neural activity, eye-tracking, or low-bandwidth interfaces—are inherently noisy and ambiguous. 
+        Traditional decoders often fail because they treat the user input in isolation, ignoring the <strong>structured environment</strong> where the robot operates and where only specific actions are meaningful at any given time.
+      </p>
+    </div>
+
+    <!-- VIDEO SECTION -->
+    <div style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">Experimental Validation</h2>
+      <div class="video-container" style="background: #000; border-radius: 12px; overflow: hidden; line-height: 0;">
+        <video autoplay loop muted playsinline style="width:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <source src="assets/videos/hmm.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p style="font-size: 0.9rem; color: #8ca0b3; font-style: italic; margin-top: 0.8rem; text-align: center;">
+        The framework in action: resolving command ambiguity by fusing real-time input with environmental affordances.
+      </p>
+    </div>
+
+    <!-- METHODOLOGY GRID -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+      <div>
+        <h3 style="color: #ffffff; border-bottom: 1px solid #3d444d; padding-bottom: 10px;">Probabilistic Fusion Approach</h3>
+        <p style="color: #b8c0ca; margin-top: 1rem;">
+          We implemented a <strong>Hidden Markov Model (HMM)</strong> architecture that treats user intent as a latent variable, updated through:
+        </p>
+        <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1.2rem; line-height: 1.8;">
+          <li><strong>User Input Evidence:</strong> Probabilistic distribution of commands (e.g., BCI, Eye-tracking, Gestures).</li>
+          <li><strong>Environmental Priors:</strong> Object affordances and target locations detected via LiDAR and Vision.</li>
+          <li><strong>Task Constraints:</strong> Transition probabilities based on the logical flow of the assistive task.</li>
+        </ul>
+      </div>
       
-      <div class="project-tags" style="margin-bottom: 2rem;">
-        <span class="skill-badge">HMM</span>
-        <span class="skill-badge">Probabilistic Fusion</span>
-        <span class="skill-badge">ROS</span>
-        <span class="skill-badge">C++</span>
-      </div>
-
-      <div class="card" style="margin-bottom: 2rem; border-left: 4px solid #9ecbff;">
-        <h3>The Scientific Challenge</h3>
-        <p>Motor Imagery (MI) signals are notoriously noisy and non-stationary. Traditional decoders often ignore the fact that the robot is operating in a structured environment where only certain actions are meaningful at any given time.</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        <div>
-          <h3>Multisensory Fusion Approach</h3>
-          <p style="color: #b8c0ca;">
-            We implemented a <strong>Hidden Markov Model (HMM)</strong> framework that fuses:
-          </p>
-          <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1rem; line-height: 1.8;">
-            <li><strong>Neural Evidence:</strong> Real-time EEG features from motor areas.</li>
-            <li><strong>Environmental Evidence:</strong> Objects and affordances detected via LiDAR/Vision.</li>
-            <li><strong>Behavioral Constraints:</strong> Probabilistic transition maps of the intended task.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Results</h3>
-          <p style="color: #b8c0ca;">
-            By contextualizing the brain signals, we achieved a significant increase in decoding accuracy and a reduction in the "false positive" commands, leading to smoother and more natural human-robot interaction in complex indoor scenarios.
-          </p>
-        </div>
+      <div>
+        <h3 style="color: #ffffff; border-bottom: 1px solid #3d444d; padding-bottom: 10px;">Key Contributions</h3>
+        <p style="color: #b8c0ca; margin-top: 1rem;">
+          By closing the loop between the human and the robot's perception, the framework:
+        </p>
+        <ul style="margin-top: 1rem; color: #b8c0ca; padding-left: 1.2rem; line-height: 1.8;">
+          <li><strong>Disambiguates Noise:</strong> Corrects "false positive" commands that don't align with the environment.</li>
+          <li><strong>Reduces Cognitive Load:</strong> The robot "anticipates" likely goals, requiring less precise input from the user.</li>
+          <li><strong>Input Agnostic:</strong> Demonstrates scalability across different assistive interfaces.</li>
+        </ul>
       </div>
     </div>
-  </section>
-</body>
-</html>
+
+    <!-- OPTIONAL: LINK TO PAPER -->
+    <div style="margin-top: 3rem; text-align: center; padding: 2rem; border-top: 1px solid #232831;">
+      <p style="color: #8ca0b3; margin-bottom: 1rem;">Want to dive deeper into the mathematics?</p>
+      <a href="#" class="button button-secondary" style="display: inline-block;">
+        <i class="fas fa-file-pdf"></i> Read Full Paper
+      </a>
+    </div>
+  </div>
+</section>

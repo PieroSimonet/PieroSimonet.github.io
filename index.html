@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -98,24 +97,24 @@
       <div class="card-grid">
 
         <div class="card">
-          <h3>Shared-Control Wheelchair</h3>
-          <div class="project-tags">
-            <span>ROS</span> <span>ROS2</span> <span>C++</span> <span>NMPC</span>
-          </div>
-          <p>
-            ROS-based assistive navigation framework integrating user and robotic intelligence.
-          </p>
-          <a href="projects/wheelchair.html" class="project-link">Read more →</a>
+            <h3>Shared Autonomy Wheelchair</h3>
+            <div class="project-tags">
+              <span>OpenNav</span> <span>NMPC</span> <span>C++</span> <span>Virtual APF</span> <span>ROS</span>
+            </div>
+            <p>
+              An advanced navigation system using Nonlinear Model Predictive Control (NMPC) and Virtual Artificial Potential Fields to enable seamless shared-control for assistive mobility.
+            </p>
+            <a href="projects/wheelchair.html" class="project-link">Read more →</a>
         </div>
 
         <div class="card">
-          <h3>Bi-Directional Intention Decoding</h3>
+          <h3>Context-Aware Probabilistic Fusion</h3>
           <div class="project-tags">
-            <span>ROS</span> <span>C++</span> <span>HMM</span>
+            <span>ROS</span> <span>C++</span> <span>HMM</span> <span>Bayesian Inference</span>
           </div>
           <p>
-            
-            ROS-based assistive navigation framework integrating user and robotic intelligence.
+            A generalized framework for assistive robotics that treats user intent as a probabilistic distribution. 
+            It leverages environmental context to disambiguate noisy inputs, closing the loop between human perception and robotic action.
           </p>
           <a href="projects/hmm.html" class="project-link">Read more →</a>
         </div>
@@ -131,11 +130,14 @@
         <div class="card card-highlight">
           <div class="badge-os">Open Source Contribution</div>
           <h3>ROSNeuro / ROS2Neuro</h3>
+          <div class="project-tags">
+            <span>ROS</span> <span>ROS2</span> <span>C++</span>
+          </div>
           <p>
             Core contributor to the ROSNeuro ecosystem. Developing middleware for 
             real-time BCI-robot integration and porting existing modules to ROS2.
           </p>
-          <div class="card-links">
+          <div class="project-link">
             <a href="https://github.com/rosneuro" target="_blank">View Organization</a>
           </div>
         </div>
@@ -149,7 +151,7 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Experience & Leadership</h2>
+      <h2 class="section-title">Experience</h2>
       
       <div class="card-grid">
         
@@ -157,19 +159,33 @@
         <div class="card">
           <div class="badge-os" style="color: #9ecbff;">International Experience</div>
           <h3>Visiting Researcher</h3>
-          <p><strong>Institution Name</strong>, City, Country</p>
-          <p style="font-size: 0.9rem; color: #8ca0b3;">Period (e.g., Sept 2024 - Dec 2024)</p>
-          <p style="margin-top: 1rem;">Research on [Topic] in collaboration with [Group/Prof]. Focus on brain-computer interface integration.</p>
+          <p><strong>UT at Austin</strong>, Austin, Texas</p>
+          <p style="font-size: 0.9rem; color: #8ca0b3;">01/11/2024 - 04/30/2025</p>
+          <p style="margin-top: 1rem; margin-bottom: 1rem;">Research on Error-Related Potential (ErrP) in collaboration with José del R. Millán. Conducting real-time ErrP detection for powered wheelchair teleoperation..</p>
+          <a href="https://www.ece.utexas.edu/people/faculty/jose-del-r-millan" target="_blank">View Laboratory</a>
+
         </div>
 
         <!-- Workshop Organizer -->
         <div class="card">
           <div class="badge-os" style="color: #f5d67b;">Leadership</div>
           <h3>Workshop Organizer</h3>
-          <p><strong>[Nome Workshop]</strong></p>
-          <p style="font-size: 0.9rem; color: #8ca0b3;">Event (e.g., IROS 2025 or BCI Conference)</p>
-          <p style="margin-top: 1rem;">Co-organized a workshop focused on [Topic], managing submissions and inviting international speakers.</p>
+          <p><strong>"How to use ROS and ROS-Neuro with a brain-computer interface (BCI) system to connect external devices for rehabilitation and assistance"</strong></p>
+          <p style="font-size: 0.9rem; color: #8ca0b3;">SSNR, Baiona 08/06/2025 - 13/06/202</p>
+          <p style="margin-top: 1rem; margin-bottom: 1rem;">Organized and managed a workshop on  how to connect a BCI to a real device.</p>
+          <a href="https://2025.summerschoolneurorehabilitation.org/workshops/" target="_blank">View Event</a>
         </div>
+
+        <!-- Cybathlon -->
+        <div class="card">
+          <div class="badge-os" style="color:#9ecbff;">International Experience</div>
+          <h3>Cybatlon BCI race</h3>
+          <p><strong>WHI team (2nd Position)</strong></p>
+          <p style="font-size: 0.9rem; color: #8ca0b3;">Cybatlon Event 27/10/2024, ETH Zurich</p>
+          <p style="margin-top: 1rem; margin-bottom: 1rem;">Designed and optimized MI decoding strategies to enhance BCI performance in competition settings.</p>
+          <a href="https://cybathlon.com/en/events/edition/cybathlon-2024/results?event=5267&discipline=48" target="_blank">View Event</a>
+        </div>
+
 
       </div>
     </div>
@@ -264,6 +280,19 @@
       
     </div>
   </footer>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modal-body">
+        <!-- Qui verrà caricato il contenuto del progetto -->
+        <div class="loader">Loading...</div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
 
 </body>
 </html>
